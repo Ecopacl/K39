@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -13,10 +14,10 @@
     --bg:      #FAFAF8;
     --bg2:     #F4F1EB;
     --bg3:     #EDE8DE;
-    --amber:   #C47A0A;
+    --amber:   #66cc66;
     --amber2:  #E8920D;
     --amber-bg:#FEF4E1;
-    --dark:    #1A1610;
+    --dark:    #555555;
     --text:    #2C2416;
     --muted:   #7A6E5E;
     --light:   #B0A490;
@@ -57,7 +58,7 @@
     display: flex; gap: 32px; align-items: center;
   }
   .nav-links a {
-    font-size: 14px; color: var(--muted);
+    font-size: 14px; color: #555555;
     text-decoration: none;
     transition: color .2s;
   }
@@ -96,7 +97,7 @@
     border: 1px solid #F0D090;
     border-radius: 99px;
     padding: 5px 16px;
-    font-size: 13px; font-weight: 500;
+    font-size: 16px; font-weight: 500;
     color: var(--amber);
     margin-bottom: 28px;
     width: fit-content;
@@ -164,13 +165,13 @@
   /* ── SECTION BASE ── */
   section { padding: 80px 5vw; }
   .section-label {
-    font-size: 12px; font-weight: 500; letter-spacing: 2px;
+    font-size: 20px; font-weight: 700; letter-spacing: 2px;
     text-transform: uppercase; color: var(--amber);
     margin-bottom: 14px;
   }
   .section-title {
     font-family: Verdana, sans-serif;
-    font-size: clamp(26px, 3.2vw, 38px);
+    font-size: clamp(22px, 3.2vw, 38px);
     font-weight: 700; color: var(--dark);
     line-height: 1.2;
     margin-bottom: 14px;
@@ -340,7 +341,7 @@
     margin-top: 6px;
   }
   .form-submit:hover { background: var(--amber2); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(196,122,10,.5); }
-  .form-note { font-size: 13px; color: #5A4E3E; margin-top: 14px; text-align: center; }
+  .form-note { font-size: 13px; color: var(--muted); margin-top: 14px; text-align: center; }
   .form-success { display: none; text-align: center; padding: 40px 20px; }
   .form-success .check {
     width: 60px; height: 60px; border-radius: 50%;
@@ -379,7 +380,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">Korobki<span>39</span></a>
+  <a class="nav-logo" href="#">Коробки<span>39</span></a>
   <div class="nav-links">
     <a href="#who">Кому подходит</a>
     <a href="#products">Ассортимент</a>
@@ -397,8 +398,8 @@
       Оптовые цены — сразу, без минимального объёма. Быстрая доставка по Калининграду. Резерв ваших позиций на складе.
     </p>
     <div class="hero-btns">
-      <a href="#form" class="btn-primary">Получить прайс-лист</a>
-      <a href="tel:+7" class="btn-secondary">Перезвонить мне</a>
+      <a href="#form" class="btn-primary">Оставить заявку</a>
+      <a href="https://s.siteapi.org/27d307544fe830a.ru/docs/1hab8zdxtw80c0wwwcoko0cskco4s8" class="btn-secondary">Каталог Хорека</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -406,11 +407,11 @@
         <div class="stat-label">бесплатная доставка</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">200+</div>
+        <div class="stat-num">1200+</div>
         <div class="stat-label">позиций в наличии</div>
       </div>
       <div class="stat-item">
-        <div class="stat-num">1&nbsp;день</div>
+        <div class="stat-num">2-3&nbsp;часа</div>
         <div class="stat-label">обработка заказа</div>
       </div>
     </div>
@@ -530,30 +531,10 @@
     <p class="section-sub">Пришлём оптовый прайс-лист и персональные условия для вашего бизнеса.</p>
 
     <div id="lead-form">
-      <div class="form-grid">
-        <div class="form-group">
-          <label>Ваше имя</label>
-          <input type="text" id="f-name" placeholder="Иван Петров">
-        </div>
-        <div class="form-group">
-          <label>Телефон</label>
-          <input type="tel" id="f-phone" placeholder="+7 (900) 000-00-00">
-        </div>
-        <div class="form-group full">
-          <label>Тип заведения</label>
-          <select id="f-type">
-            <option value="" disabled selected>Выберите формат...</option>
-            <option>Кофейня</option>
-            <option>Ресторан</option>
-            <option>Кафе</option>
-            <option>Кондитерская / Пекарня</option>
-            <option>Доставка еды</option>
-            <option>Фастфуд / Стрит-фуд</option>
-            <option>Отель</option>
-            <option>Другое</option>
-          </select>
-        </div>
-        <button class="form-submit" onclick="submitForm()">Получить прайс-лист →</button>
+      <div class="form-grid" style="text-align: center; display: block;">
+        
+         <a href=https://korobki39.ru/#feedback class="btn-primary">Оставить заявку</a>
+        
       </div>
       <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
     </div>
@@ -568,7 +549,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Korobki<span>39</span></div>
+  <div class="footer-logo">Коробки<span>39</span></div>
   <div class="footer-contacts">
     <a href="https://yandex.ru/maps/-/CHVaYILS" target="_blank">ул. Горького, 207</a>
     <a href="https://yandex.ru/maps/-/CHfvjXN9" target="_blank">ул. Магнитная, 4</a>
@@ -579,34 +560,17 @@
 
 <script>
 function submitForm() {
-  const name  = document.getElementById('f-name').value.trim();
+  const name = document.getElementById('f-name').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
-  const type  = document.getElementById('f-type').value;
-
   if (!name || !phone) {
-    if (!name)  document.getElementById('f-name').style.borderColor  = '#E05050';
+    if (!name) document.getElementById('f-name').style.borderColor = '#E05050';
     if (!phone) document.getElementById('f-phone').style.borderColor = '#E05050';
     return;
   }
-
-  const subject = encodeURIComponent('Новая заявка с HoReCa-страницы');
-  const body = encodeURIComponent(
-    'Новая заявка с сайта korobki39.ru/horeca\n\n' +
-    'Имя: '           + name  + '\n' +
-    'Телефон: '       + phone + '\n' +
-    'Тип заведения: ' + (type || 'не указан') + '\n\n' +
-    '---\nОтправлено через форму на сайте'
-  );
-
-  window.location.href = 'mailto:shop@korobki39.ru?subject=' + subject + '&body=' + body;
-
-  setTimeout(function() {
-    document.getElementById('lead-form').style.display   = 'none';
-    document.getElementById('form-success').style.display = 'block';
-  }, 400);
+  document.getElementById('lead-form').style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
 }
-
-['f-name','f-phone'].forEach(function(id) {
+['f-name','f-phone'].forEach(id => {
   document.getElementById(id).addEventListener('input', function() {
     this.style.borderColor = '';
   });
