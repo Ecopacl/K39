@@ -1,7 +1,6 @@
-
-
-
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Korobki39 — Поставки для HoReCa</title>
@@ -375,8 +374,8 @@
     .hero-stats { gap: 28px; }
   }
 </style>
-
-
+</head>
+<body>
 
 <!-- NAV -->
 <nav>
@@ -543,7 +542,7 @@
         <div class="form-group full">
           <label>Тип заведения</label>
           <select id="f-type">
-            <option value="" disabled="" selected="">Выберите формат...</option>
+            <option value="" disabled selected>Выберите формат...</option>
             <option>Кофейня</option>
             <option>Ресторан</option>
             <option>Кафе</option>
@@ -580,21 +579,38 @@
 
 <script>
 function submitForm() {
-  const name = document.getElementById('f-name').value.trim();
+  const name  = document.getElementById('f-name').value.trim();
   const phone = document.getElementById('f-phone').value.trim();
+  const type  = document.getElementById('f-type').value;
+
   if (!name || !phone) {
-    if (!name) document.getElementById('f-name').style.borderColor = '#E05050';
+    if (!name)  document.getElementById('f-name').style.borderColor  = '#E05050';
     if (!phone) document.getElementById('f-phone').style.borderColor = '#E05050';
     return;
   }
-  document.getElementById('lead-form').style.display = 'none';
-  document.getElementById('form-success').style.display = 'block';
+
+  const subject = encodeURIComponent('Новая заявка с HoReCa-страницы');
+  const body = encodeURIComponent(
+    'Новая заявка с сайта korobki39.ru/horeca\n\n' +
+    'Имя: '           + name  + '\n' +
+    'Телефон: '       + phone + '\n' +
+    'Тип заведения: ' + (type || 'не указан') + '\n\n' +
+    '---\nОтправлено через форму на сайте'
+  );
+
+  window.location.href = 'mailto:shop@korobki39.ru?subject=' + subject + '&body=' + body;
+
+  setTimeout(function() {
+    document.getElementById('lead-form').style.display   = 'none';
+    document.getElementById('form-success').style.display = 'block';
+  }, 400);
 }
-['f-name','f-phone'].forEach(id => {
+
+['f-name','f-phone'].forEach(function(id) {
   document.getElementById(id).addEventListener('input', function() {
     this.style.borderColor = '';
   });
 });
 </script>
-
-
+</body>
+</html>
