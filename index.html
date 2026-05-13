@@ -50,7 +50,7 @@
   .nav-logo {
     font-family: Verdana, sans-serif;
     font-size: 20px; font-weight: 700;
-    color: var(--dark);
+    color: var(--amber);
     text-decoration: none; letter-spacing: .3px;
   }
   .nav-logo span { color: var(--amber); }
@@ -293,9 +293,9 @@
     max-width: 600px; margin: 0 auto; text-align: center;
     position: relative; z-index: 1;
   }
-  .form-wrap .section-label { color: var(--amber2); }
-  .form-wrap .section-title { color: #F5EDD8; text-align: center; }
-  .form-wrap .section-sub { color: #8A7E6E; text-align: center; margin: 0 auto; }
+  .form-wrap .section-label { color: var(--amber); }
+  .form-wrap .section-title { color: var(--amber2); text-align: center; }
+  .form-wrap .section-sub { color: #F5EDD8; text-align: center; margin: 0 auto; }
   .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -360,7 +360,12 @@
     display: flex; justify-content: space-between; align-items: center;
     flex-wrap: wrap; gap: 20px;
   }
-  .footer-logo { font-family: Verdana, sans-serif; font-size: 18px; font-weight: 700; }
+  .footer-logo {
+    font-family: Verdana, sans-serif;
+    font-size: 20px; font-weight: 700;
+    color: var(--amber);
+    text-decoration: none; letter-spacing: .3px;
+  }
   .footer-logo span { color: var(--amber); }
   .footer-contacts { display: flex; flex-direction: column; gap: 4px; text-align: right; }
   .footer-contacts a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color .2s; }
@@ -380,7 +385,7 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="https://korobki39.ru">Коробки<span>39</span></a>
+  <a class="nav-logo" href="https://korobki39.ru">КОРОБКИ<span>39</span></a>
   <div class="nav-links">
     <a href="#who">Кому подходит</a>
     <a href="#products">Ассортимент</a>
@@ -399,7 +404,7 @@
     </p>
     <div class="hero-btns">
       <a href="#form" class="btn-primary">Оставить заявку</a>
-      <a href="https://https://s.siteapi.org/27d307544fe830a.ru/docs/9pnmqy2j5dcsw4gwgogc0owsk0wgks" class="btn-secondary">Каталог Хорека</a>
+      <a href="https://s.siteapi.org/27d307544fe830a.ru/docs/9pnmqy2j5dcsw4gwgogc0owsk0wgks" class="btn-secondary">Каталог Хорека</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -529,6 +534,14 @@
     <div class="section-label" style="text-align:center">Получить прайс</div>
     <h2 class="section-title">Оставьте заявку —<br>ответим за 1 час</h2>
     <p class="section-sub">Пришлём оптовый прайс-лист и персональные условия для вашего бизнеса.</p>
+    <p class="section-sub">
+  Или, просто, позвоните/напишите нам на 
+  <span class="copy-phone-container">
+    <a href="tel:+79217101658" class="phone-link">+7(921)710-16-58</a>
+    
+  </span> 
+  в Макс, Телеграм, VK.
+</p>
 
     <div id="lead-form">
       <div class="form-grid" style="text-align: center; display: block;">
@@ -550,11 +563,14 @@
 <!-- FOOTER -->
 <footer>
 <a href="https://korobki39.ru" class="footer-logo" style="text-decoration: none; display: inline-block;">
-  Коробки<span>39</span>
+  КОРОБКИ<span>39</span>
 </a>
   <div class="footer-contacts">
     <a href="https://yandex.ru/maps/-/CHVaYILS" target="_blank">ул. Горького, 207</a>
     <a href="https://yandex.ru/maps/-/CHfvjXN9" target="_blank">ул. Магнитная, 4</a>
+    <a href="https://max.ru/+79217101658" target="_blank">Написать в МАКС</a>
+    <a href="https://t.me/+79217101658" target="_blank">Написать в Телеграм</a>
+    <a href="http://vk.com/korobki39" target="_blank">Написать в ВКонтакте</a>
     <a href="https://korobki39.ru">korobki39.ru</a>
   </div>
   <div class="footer-copy">© 2026 Korobki39.ru — поставщик упаковки для HoReCa в Калининграде</div>
